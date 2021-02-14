@@ -1,0 +1,14 @@
+package practica2;
+import javax.swing.*;
+public class mainejer2 {
+
+		public static void main(String[]args)
+		 {
+			int x=Integer.parseInt(JOptionPane.showInputDialog("Cantidad de sumas"));
+			ejer2 suma= new ejer2(x);
+			JOptionPane.showMessageDialog(null, suma);
+			
+		
+		 }
+	}
+

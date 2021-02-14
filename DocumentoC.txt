@@ -1,0 +1,16 @@
+package practica2;
+import javax.swing.*;
+public class mainejer1 {
+		public static void main(String[]args)
+		 {
+			int h=0,m=0,s=0;
+			String tiempo=JOptionPane.showInputDialog("Ingrese hora separado por el caracter ':' ");
+			String tiempof[]=tiempo.split(":");
+			h=Integer.parseInt(tiempof[0]);
+			m=Integer.parseInt(tiempof[1]);
+			s=Integer.parseInt(tiempof[2]);
+			ejer1 hora=new ejer1(h,m,s);
+			JOptionPane.showMessageDialog(null, hora);
+		  
+		  }
+	}
