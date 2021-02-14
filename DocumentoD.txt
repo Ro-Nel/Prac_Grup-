@@ -12,3 +12,37 @@ public class mainejer2 {
 		 }
 	}
 
+/*2.- Generar la aproximación al valor de PI (3.14159…) 
+ * mediante una serie, utilizar el concepto de constructor y la definición de algún  objeto.
+ */
+package practica2;
+
+public class ejer2 {
+		int x;
+		public ejer2(int x){
+			this.x = x;
+			
+		}
+		public int getX() {
+			return x;
+		}
+		public double caclc(){
+			int aux=1,aux2=3;
+			double r1=0,r2=0;
+			for (int i=0;i<x/2;i++){
+				r1=r1+4/aux;
+				aux=aux+4;
+			}
+			for (int j=0;j<x/2;j++){
+				r2=r2+4/aux2;
+				aux2=aux2+4;
+			}
+			return r1-r2;
+		}
+		@Override
+		public String toString() {
+			return ""+caclc();
+		}
+		
+
+	}
