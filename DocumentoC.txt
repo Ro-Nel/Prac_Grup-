@@ -1,4 +1,4 @@
-package practica2;
+package PRACTICA2;
 import javax.swing.*;
 public class mainejer1 {
 		public static void main(String[]args)
@@ -18,7 +18,7 @@ public class mainejer1 {
 /*1.-  Una clase contiene el tiempo expresada en horas, minutos y segundos
  *  con valores arbitrarios, luego de la creación del constructor, 
  *  agregar una función que transforme dicha medida en una expresión correcta.
- *   Por ejemplo, dada la medida 3h 118m 195s, el programa deberá obtener como resultado 5h 1m 15s.
+ *   POR EJEMPLO, DADA LA MEDIDA 3h 118m 195s el programa debera obtener como resultado 5h 1m 15s.
  */
 package practica2;
 
@@ -54,6 +54,7 @@ public class ejer1 {
 				m=m-60;
 				h++;
 			}
+			return h+":"+m+":"+s;
 			return h+":"+m+":"+s;
 		}
 
