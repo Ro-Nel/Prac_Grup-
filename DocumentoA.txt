@@ -2,10 +2,13 @@
 ALAN TURING
 
 Alan Turing puede presumir de ser una de las personas más importantes de la historia de la humanidad. 
+El matemático británico es una de las personas cuyo ingenio logró cambiar el mundo, especialmente por ser básico para acabar la IIGM... pero sin el reconocimiento merecido
 Matemático británico nacido el 23 de junio de 1912, 
 desde muy pronto comenzó a demostrar su capacidad para entender los algoritmos y conseguir que una máquina también lo hiciera, 
 lo que le llevó a ser considerado como uno de los padres de la computación. 
 Pero su mayor logro fue 'acabar' con Hitler: 65 años después de su muerte, ha recibido su merecido reconocimiento.
+
+El brillante matemático creó, en 1934, la máquina de Turing, considerada como un prototipo de los actuales ordenadores cuyas leyes son la base de la ciencia de la computación. Su amplia experiencia en este campo y su capacidad para entender códigos pronto le convirtieron en una pieza fundamental en la Segunda Guerra Mundial: poder entender el lenguaje variable a través del que se comunicaban los nazis pasó a ser una misión fundamental.
 
 -------------------------------------------------------------------------------------------------------------------------
 MARK ELLIOT ZUCKERBERG
