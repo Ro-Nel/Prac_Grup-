@@ -1,27 +1,9 @@
 package PRACTICA2;
-import javax.swing.*;
-public class mainejer1 {
-		public static void main(String[]args)
-		 {
-			int h=0,m=0,s=0;
-			String tiempo=JOptionPane.showInputDialog("Ingrese hora separado por el caracter ':' ");
-			String tiempof[]=tiempo.split(":");
-			h=Integer.parseInt(tiempof[0]);
-			m=Integer.parseInt(tiempof[1]);
-			s=Integer.parseInt(tiempof[2]);
-			ejer1 hora=new ejer1(h,m,s);
-			JOptionPane.showMessageDialog(null, hora);
-		  
-		  }
-	}
-
 /*1.-  Una clase contiene el tiempo expresada en horas, minutos y segundos
  *  con valores arbitrarios, luego de la creación del constructor, 
  *  agregar una función que transforme dicha medida en una expresión correcta.
  *   POR EJEMPLO, DADA LA MEDIDA 3h 118m 195s el programa debera obtener como resultado 5h 1m 15s.
  */
-package practica2;
-
 public class ejer1 {
 		int h,m,s;
 		 public ejer1(int h, int m, int s) 
@@ -59,3 +41,19 @@ public class ejer1 {
 		}
 
 	}
+
+public class mainejer1 {
+		public static void main(String[]args)
+		 {
+			int h=0,m=0,s=0;
+			String tiempo=JOptionPane.showInputDialog("Ingrese hora separado por el caracter ':' ");
+			String tiempof[]=tiempo.split(":");
+			h=Integer.parseInt(tiempof[0]);
+			m=Integer.parseInt(tiempof[1]);
+			s=Integer.parseInt(tiempof[2]);
+			ejer1 hora=new ejer1(h,m,s);
+			JOptionPane.showMessageDialog(null, hora);
+		  
+		  }
+	}
+
