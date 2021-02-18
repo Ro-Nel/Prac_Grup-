@@ -19,3 +19,4 @@ Lineal o en bus. El servidor se halla a la cabeza de la red y los clientes se re
 En estrella. El servidor de halla en el centro de la red y cada cliente posee una conexión exclusiva, de modo que cualquier comunicación entre las máquinas debe pasar primero por él.
 En anillo o circular. Todas las máquinas están conectadas en círculo, en contacto con las más próximas y en igualdad de condiciones, si bien el servidor sigue contando con su jerarquía.
 
+Fecha: 17/02/2021

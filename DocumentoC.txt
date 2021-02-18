@@ -1,4 +1,5 @@
 package PRACTICA2;
+HEAD
 import javax.swing.*;
 public class mainejer1 {
 		public static void main(String[]args)
@@ -15,13 +16,13 @@ public class mainejer1 {
 		  }
 	}
 
+
+
 /*1.-  Una clase contiene el tiempo expresada en horas, minutos y segundos
  *  con valores arbitrarios, luego de la creación del constructor, 
  *  agregar una función que transforme dicha medida en una expresión correcta.
  *   POR EJEMPLO, DADA LA MEDIDA 3h 118m 195s el programa debera obtener como resultado 5h 1m 15s.
  */
-package practica2;
-
 public class ejer1 {
 		int h,m,s;
 		 public ejer1(int h, int m, int s) 
@@ -60,6 +61,7 @@ public class ejer1 {
 
 	}
 
+HEAD
 Ejerccio Extra -tabla de multiplicar
 
 import java.util.Scanner;
@@ -84,3 +86,174 @@ public class tablaMultiplicar
         }
     }
 }
+
+public class mainejer1 {
+		public static void main(String[]args)
+		 {
+			int h=0,m=0,s=0;
+			String tiempo=JOptionPane.showInputDialog("Ingrese hora separado por el caracter ':' ");
+			String tiempof[]=tiempo.split(":");
+			h=Integer.parseInt(tiempof[0]);
+			m=Integer.parseInt(tiempof[1]);
+			s=Integer.parseInt(tiempof[2]);
+			ejer1 hora=new ejer1(h,m,s);
+			JOptionPane.showMessageDialog(null, hora);
+		  
+		  }
+	}
+
+/*2.-  Escribir un programa  para realizar lo siguiente: m
+Un archivo de texto contiene la cedula, el apellido paterno y el nombre, de un grupo de personas(emplear tokens para separar campos), realizar mediante funciones:
+•	Lectura del archivo.
+•	Copiar a un segundo archivo los datos de las personas que tienen apellidos que comiencen con alguna letra que elija el usuario.
+•	Añadir nuevos nombres al archivo.
+•	Buscar a una persona por número de cedula y desplegar sus datos.*/
+
+package ejer2;
+	import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+		import java.io.FileWriter;
+		import java.io.IOException;
+		import javax.swing.*;
+
+
+public class progra {
+		 
+
+		public static void main(String[] args) throws Exception{
+		   for(;true;)
+		   {
+		    String [] menu1= {"ingresar","lectura","busqueda","Salir"};
+		    String valor1=(String) JOptionPane.showInputDialog(null,"Seleccione la opcion","Opciones",JOptionPane.DEFAULT_OPTION,null,menu1,menu1[0]);
+		    switch(valor1)
+		    {
+		    case "ingresar": ingresar();break;
+		    case "lectura": reporte();break;
+		    case "busqueda": busqueda();break;
+		    case "Salir": System.exit(0);break;
+		    }
+		   }
+
+		  }
+		  public static void ingresar() throws IOException{
+		  try {
+				File archivo = new File("archivos.txt");
+				BufferedWriter f1 = new BufferedWriter(new FileWriter(archivo,true));
+				int n=Integer.parseInt(JOptionPane.showInputDialog("CUANTOS AÑADIRA"));
+				for(int i=0;i<n;i++){
+				String c1 = JOptionPane.showInputDialog("CEDULA: ");
+				String c2 = JOptionPane.showInputDialog("APELLIDO : ");
+				String c3 = JOptionPane.showInputDialog("NOMBRE DEL GRUPO: ");
+			
+				f1.write(c1+":"+c2+":"+c3+"\r\n");
+				}
+				f1.close();
+				} 
+		  catch (Exception e) {
+				JOptionPane.showMessageDialog(null,"NO EXISTE EL ARCHIVO","",JOptionPane.ERROR_MESSAGE);
+				}
+}
+
+		  public static void reporte(){
+				try{
+					BufferedReader f1 = new BufferedReader(new FileReader(new File ("archivos.txt")));
+					String cadena;
+					String c1="CEDULA\tAPELLIDO\tNOMBRE DEL GRUPO \n";  
+					c1+="------------------------------------------------------------------------------------------------------------------------------------------------------\n";
+					while((cadena=f1.readLine())!= null){
+					   String[] array=cadena.split(":");
+					   for(int i=0;i<3;i=i+3)
+					   {
+						
+					     c1+=array[i]+"\t"+array[i+1]+"\t\t"+array[i+2]+"\n";
+					   }
+					 }
+					c1+="-------------------------------------------------------------------------------------------------------------------------------------------------------\n";
+					
+					JTextArea ob = new JTextArea(30,60);
+					 ob.setText(c1);
+					 JScrollPane ob1 = new JScrollPane(ob);
+					 JOptionPane.showMessageDialog(null, ob1);
+					  f1.close();
+					}catch (Exception e) {
+					JOptionPane.showMessageDialog(null,"NO EXISTE EL ARCHIVO","",JOptionPane.ERROR_MESSAGE);
+					}
+			}
+
+static void busqueda() throws IOException {
+	 BufferedReader x = new BufferedReader (new FileReader ("archivos.txt"));
+	 String c1 = "";
+	  int flag=0;
+	  try {
+		  String cedubus= JOptionPane.showInputDialog("cedula a buscar en el archivo: "); 
+		  while( x.ready()) {
+			  c1 = x.readLine();
+			  if(c1 .equals(cedubus)){
+				  flag=1;
+				  break;
+			  }
+		  }
+		   if(flag==1) 
+			    JOptionPane.showMessageDialog (null, "NO EXISTE");
+		   
+		   else
+			   JOptionPane.showMessageDialog ( null,"SI  EXISTE");
+		   try{
+				BufferedReader f1 = new BufferedReader(new FileReader(new File ("archivos.txt")));
+				String cadena;
+				String c11="CEDULA\tAPELLIDO\tNOMBRE DEL GRUPO \n";  
+				c11+="------------------------------------------------------------------------------------------------------------------------------------------------------\n";
+				while((cadena=f1.readLine())!= null){
+				   String[] array=cadena.split(":");
+				   for(int i=0;i<3;i=i+3)
+				   {
+					
+				     c11+=array[i]+"\t"+array[i+1]+"\t\t"+array[i+2]+"\n";
+				   }
+				 }
+				c11+="-------------------------------------------------------------------------------------------------------------------------------------------------------\n";
+				
+				JTextArea ob = new JTextArea(30,60);
+				 ob.setText(c11);
+				 JScrollPane ob1 = new JScrollPane(ob);
+				 JOptionPane.showMessageDialog(null, ob1);
+				  f1.close();
+				}catch (Exception e) {
+				JOptionPane.showMessageDialog(null,"NO EXISTE EL ARCHIVO","",JOptionPane.ERROR_MESSAGE);
+				}
+		   
+	  }
+	  
+	  catch (IOException e) {
+		  System.out.println(" NO EXISTE EN ARCHIVO");
+		  }
+	  
+	  x.close();
+}
+}
+Ejercicio 3 Ro
+public class mainejer3 {
+		public static void main(String[] args) {
+
+			ejer3 x[]=new ejer3[3];
+			x[0]= new ejer3(9,35,10,15);
+			x[1]= new ejer3(11,10,12,20);
+			x[2]= new ejer3(17,55,21,30);
+			for(int i=0;i<x.length;i++){
+				   JTextArea ta=new JTextArea(3,42);
+				   JScrollPane sp=new JScrollPane(ta);
+				   ta.setText("He\tMe\tHs\tMs\ttiempo\tPago\n"+x[i].toString());
+				   JOptionPane.showMessageDialog(null,sp);
+				  }
+
+		}
+	}
+
+
+
+
+Fecha: 17/02/2021
+
+
