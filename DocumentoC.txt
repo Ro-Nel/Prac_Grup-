@@ -64,8 +64,8 @@ Un archivo de texto contiene la cedula, el apellido paterno y el nombre, de un g
 •	Añadir nuevos nombres al archivo.
 •	Buscar a una persona por número de cedula y desplegar sus datos.*/
 
-package ejer2;
-	import java.io.BufferedReader;
+
+	
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
