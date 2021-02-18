@@ -1,4 +1,23 @@
 package PRACTICA2;
+
+import javax.swing.*;
+public class mainejer1 {
+		public static void main(String[]args)
+		 {
+			int h=0,m=0,s=0;
+			String tiempo=JOptionPane.showInputDialog("Ingrese hora separado por el caracter ':' ");
+			String tiempof[]=tiempo.split(":");
+			h=Integer.parseInt(tiempof[0]);
+			m=Integer.parseInt(tiempof[1]);
+			s=Integer.parseInt(tiempof[2]);
+			ejer1 hora=new ejer1(h,m,s);
+			JOptionPane.showMessageDialog(null, segundos);
+		  
+		  }
+	}
+
+
+
 /*1.-  Una clase contiene el tiempo expresada en horas, minutos y segundos
  *  con valores arbitrarios, luego de la creación del constructor, 
  *  agregar una función que transforme dicha medida en una expresión correcta.
@@ -26,14 +45,14 @@ public class ejer1 {
 			return "La hora correcta es: "+horas();
 		}
 		public String horas(){
-			s=s+(m*60)+(h*3600);
+			s=s+(m*60)-(h*3600);
 			m=0;h=0;
 			while (s>=60){
 				s=s-60;
 				m++;
 			}
 			while (m>=60){
-				m=m-60;
+				m=m+60;
 				h++;
 			}
 			return h+":"+m+":"+s;
@@ -41,6 +60,31 @@ public class ejer1 {
 		}
 
 	}
+
+Ejerccio Extra - Escribir un programa  para realizar lo siguiente: tabla de multiplicar
+
+import java.util.Scanner;
+ 
+public class tablaMultiplicar
+{
+    public static void main(String[] ARGS)
+    {
+        Scanner obtenerNumero = new Scanner(System.in);
+        int n,i,j;
+ 
+        System.out.print("indica la tabla de multiplicar: ");
+        n = obtenerNumero.nextInt();
+ 
+        for(i = 1; i<=n; i++)
+        {
+            for(j = 1; j <= 12; j++)
+            {
+                System.out.println(i + " X " + j + " = " + i*j);
+            }
+            System.out.println();
+        }
+    }
+}
 
 public class mainejer1 {
 		public static void main(String[]args)
@@ -59,7 +103,7 @@ public class mainejer1 {
 
 /*2.-  Escribir un programa  para realizar lo siguiente: m
 Un archivo de texto contiene la cedula, el apellido paterno y el nombre, de un grupo de personas(emplear tokens para separar campos), realizar mediante funciones:
-•	Lectura del archivo.
+•	LECTURA DE ARCHIVOS
 •	Copiar a un segundo archivo los datos de las personas que tienen apellidos que comiencen con alguna letra que elija el usuario.
 •	Añadir nuevos nombres al archivo.
 •	Buscar a una persona por número de cedula y desplegar sus datos.*/
@@ -116,7 +160,7 @@ public class progra {
 					BufferedReader f1 = new BufferedReader(new FileReader(new File ("archivos.txt")));
 					String cadena;
 					String c1="CEDULA\tAPELLIDO\tNOMBRE DEL GRUPO \n";  
-					c1+="------------------------------------------------------------------------------------------------------------------------------------------------------\n";
+					c1+="----------------------------------------------------------------------------------\n";
 					while((cadena=f1.readLine())!= null){
 					   String[] array=cadena.split(":");
 					   for(int i=0;i<3;i=i+3)
@@ -125,7 +169,7 @@ public class progra {
 					     c1+=array[i]+"\t"+array[i+1]+"\t\t"+array[i+2]+"\n";
 					   }
 					 }
-					c1+="-------------------------------------------------------------------------------------------------------------------------------------------------------\n";
+					c1+="--------------------------------------------------------------------------------\n";
 					
 					JTextArea ob = new JTextArea(30,60);
 					 ob.setText(c1);
@@ -159,7 +203,7 @@ static void busqueda() throws IOException {
 				BufferedReader f1 = new BufferedReader(new FileReader(new File ("archivos.txt")));
 				String cadena;
 				String c11="CEDULA\tAPELLIDO\tNOMBRE DEL GRUPO \n";  
-				c11+="------------------------------------------------------------------------------------------------------------------------------------------------------\n";
+				c11+="-------------------------------------------------------------\n";
 				while((cadena=f1.readLine())!= null){
 				   String[] array=cadena.split(":");
 				   for(int i=0;i<3;i=i+3)
@@ -168,7 +212,7 @@ static void busqueda() throws IOException {
 				     c11+=array[i]+"\t"+array[i+1]+"\t\t"+array[i+2]+"\n";
 				   }
 				 }
-				c11+="-------------------------------------------------------------------------------------------------------------------------------------------------------\n";
+				c11+="------------------------------------------------------------\n";
 				
 				JTextArea ob = new JTextArea(30,60);
 				 ob.setText(c11);
@@ -188,9 +232,27 @@ static void busqueda() throws IOException {
 	  x.close();
 }
 }
+Ejercicio 3 Ro
+public class mainejer3 {
+		public static void main(String[] args) {
+
+			ejer3 x[]=new ejer3[3];
+			x[0]= new ejer3(9,35,10,15);
+			x[1]= new ejer3(11,10,12,20);
+			x[2]= new ejer3(17,55,21,30);
+			for(int i=0;i<x.length;i++){
+				   JTextArea ta=new JTextArea(3,42);
+				   JScrollPane sp=new JScrollPane(ta);
+				   ta.setText("He\tMe\tHs\tMs\ttiempo\tPago\n"+x[i].toString());
+				   JOptionPane.showMessageDialog(null,sp);
+				  }
+
+		}
+	}
 
 
 
 
 Fecha: 17/02/2021
+
 
