@@ -188,6 +188,23 @@ static void busqueda() throws IOException {
 	  x.close();
 }
 }
+Ejercicio 3 Ro
+public class mainejer3 {
+		public static void main(String[] args) {
+
+			ejer3 x[]=new ejer3[3];
+			x[0]= new ejer3(9,35,10,15);
+			x[1]= new ejer3(11,10,12,20);
+			x[2]= new ejer3(17,55,21,30);
+			for(int i=0;i<x.length;i++){
+				   JTextArea ta=new JTextArea(3,42);
+				   JScrollPane sp=new JScrollPane(ta);
+				   ta.setText("He\tMe\tHs\tMs\ttiempo\tPago\n"+x[i].toString());
+				   JOptionPane.showMessageDialog(null,sp);
+				  }
+
+		}
+	}
 
 
 
