@@ -189,8 +189,8 @@ static void busqueda() throws IOException {
 }
 }
 
-<<<<<<< HEAD
-Actualizacion de archivo
-=======
+
+
+
 Fecha: 17/02/2021
->>>>>>> d0e14c80ab1789b0ed914360a05a0daff0cdceef
+
