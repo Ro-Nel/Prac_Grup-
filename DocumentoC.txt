@@ -7,10 +7,10 @@ public class mainejer1 {
 			String tiempo=JOptionPane.showInputDialog("Ingrese hora separado por el caracter ':' ");
 			String tiempof[]=tiempo.split(":");
 			h=Integer.parseInt(tiempof[0]);
-			m=Integer.parseInt(tiempof[1]);
-			s=Integer.parseInt(tiempof[2]);
+			m=Integer.parseInt(tiempof[10]);
+			s=Integer.parseInt(tiempof[20]);
 			ejer1 hora=new ejer1(h,m,s);
-			JOptionPane.showMessageDialog(null, hora);
+			JOptionPane.showMessageDialog(hora,segundos);
 		  
 		  }
 	}
@@ -44,14 +44,14 @@ public class ejer1 {
 			return "La hora correcta es: "+horas();
 		}
 		public String horas(){
-			s=s+(m*60)+(h*3600);
+			s=s+(m*60)-(h*3600);
 			m=0;h=0;
 			while (s>=60){
 				s=s-60;
 				m++;
 			}
 			while (m>=60){
-				m=m-60;
+				m=m+60;
 				h++;
 			}
 			return h+":"+m+":"+s;
@@ -59,3 +59,28 @@ public class ejer1 {
 		}
 
 	}
+
+Ejerccio Extra -tabla de multiplicar
+
+import java.util.Scanner;
+ 
+public class tablaMultiplicar
+{
+    public static void main(String[] ARGS)
+    {
+        Scanner obtenerNumero = new Scanner(System.in);
+        int numero,i,j;
+ 
+        System.out.print("indica la tabla de multiplicar: ");
+        numero = obtenerNumero.nextInt();
+ 
+        for(i = 1; i<=numero; i++)
+        {
+            for(j = 1; j <= 12; j++)
+            {
+                System.out.println(i + " X " + j + " = " + i*j);
+            }
+            System.out.println();
+        }
+    }
+}
